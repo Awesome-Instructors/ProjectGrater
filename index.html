@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Grater</title>
+  </head>
+  <body>
+    <h1>Project Grater and Sharks</h1>
+
+    <h3>The best way to grade projects!</h3>
+
+    <p>To use this, you must be an instructor.</p>
+    <script>
+          const url = 'https://random-dog-facts.p.rapidapi.com/';
+      const options = {
+      	method: 'GET',
+      	headers: {
+      		'x-rapidapi-key': 'wRUdVgS9h8mshu6AtPiionlYPkyHp1jC7hTjsn4eq0AluVA70a',
+      		'x-rapidapi-host': 'random-dog-facts.p.rapidapi.com'
+      	}
+      };
+
+      	const response = fetch(url, options)
+        .then(response => response.json())
+      	.then(result => console.log(result))
+        .catch(error => {
+      	console.error(error);
+        })
+      
+    </script>
+  </body>
+</html>
